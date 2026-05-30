@@ -1,0 +1,6 @@
+# IDE
+.idea/
+.vscode/
+
+# Ignore Documentation (for now)
+Docs/
