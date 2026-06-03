@@ -4,3 +4,6 @@
 
 # Ignore Documentation (for now)
 Docs/
+
+# Dependencies
+node_modules/

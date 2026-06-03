@@ -1,0 +1,7 @@
+{
+  "name": "experiments",
+  "private": true,
+  "workspaces": [
+    "*/server"
+  ]
+}
