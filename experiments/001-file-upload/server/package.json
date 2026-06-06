@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "001-file-upload",
   "version": "1.0.0",
   "description": "",
   "main": "src/server.js",

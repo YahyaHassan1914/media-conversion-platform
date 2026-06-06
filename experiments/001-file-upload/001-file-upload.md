@@ -9,11 +9,14 @@ difficulty: beginner
 
 ## Overview
 
-This experiment explores the fundamental file upload workflow that will be used throughout the Media Conversion Platform.
+This experiment explores the fundamental file upload workflow that will be used throughout the Media Conversion
+Platform.
 
-The goal is to verify that a user can select a file in the browser, upload it to a backend server, and have the server successfully store the file on disk.
+The goal is to verify that a user can select a file in the browser, upload it to a backend server, and have the server
+successfully store the file on disk.
 
-This is one of the core building blocks of the final platform, since every media conversion process begins with receiving a file from the user.
+This is one of the core building blocks of the final platform, since every media conversion process begins with
+receiving a file from the user.
 
 ---
 
@@ -35,12 +38,12 @@ Browser
     │
     │ HTTP POST
     │ multipart/form-data
-    |
+    │
     ▼
 Express API
     │
     │ Multer
-    |
+    │
     ▼
 uploads/
 ```
@@ -59,7 +62,7 @@ uploads/
 │
 ├── server/
 │   ├── src/
-│   │   └── index.ts
+│   │   └── server.js
 │   │
 │   └── uploads/
 │
@@ -114,8 +117,8 @@ When a file is selected, the browser creates a `File` object that can be accesse
 const fileInput = document.getElementById("fileInput");
 
 fileInput.addEventListener("change", () => {
-  const file = fileInput.files[0];
-  console.log(file);
+    const file = fileInput.files[0];
+    console.log(file);
 });
 ```
 
@@ -134,8 +137,8 @@ It automatically formats the request so that files and other form fields can be 
 
 ```js
 await fetch("/upload", {
-  method: "POST",
-  body: formData
+    method: "POST",
+    body: formData
 });
 ```
 
@@ -145,7 +148,8 @@ await fetch("/upload", {
 
 `multipart/form-data` is the HTTP content type used when sending files to a server.
 
-Unlike JSON requests, file uploads require a multipart format because binary file data cannot be represented efficiently as standard JSON.
+Unlike JSON requests, file uploads require a multipart format because binary file data cannot be represented efficiently
+as standard JSON.
 
 The browser automatically sets this content type when a `FormData` object is sent using `fetch()`.
 
@@ -173,7 +177,7 @@ Example configuration:
 import multer from "multer";
 
 const upload = multer({
-  dest: "uploads/"
+    dest: "uploads/"
 });
 ```
 
@@ -181,11 +185,11 @@ Using Multer in a route:
 
 ```js
 app.post("/upload", upload.single("file"), (req, res) => {
-  console.log(req.file);
+    console.log(req.file);
 
-  res.json({
-    message: "Upload successful"
-  });
+    res.json({
+        message: "Upload successful"
+    });
 });
 ```
 
