@@ -3,5 +3,9 @@
   "private": true,
   "workspaces": [
     "*/server"
-  ]
+  ],
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
 }
