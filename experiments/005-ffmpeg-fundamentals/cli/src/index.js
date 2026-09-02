@@ -41,16 +41,16 @@ const command = COMMANDS[commandName];
 try {
     if (!command) {
         printHelp();
-        process.exit(1);
+        // process.exit(1);
     }
 
     if (commandArgs.length < command.args) {
         console.error(`Usage: ${command.usage}`);
-        process.exit(1);
+        // process.exit(1);
     }
 
     await command.handler(commandArgs);
 } catch (error) {
     console.error(error.message);
-    process.exit(1);
+    // process.exit(1);
 }

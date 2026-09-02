@@ -1,0 +1,285 @@
+/* =========================
+   Reset
+   ========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================
+   Base
+   ========================= */
+
+body {
+    min-height: 100vh;
+
+    font-family:
+            Arial,
+            Helvetica,
+            sans-serif;
+
+    background: #f4f6f8;
+    color: #1f2933;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================
+   Layout
+   ========================= */
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   Header
+   ========================= */
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #667085;
+    font-size: 16px;
+}
+
+
+/* =========================
+   Cards
+   ========================= */
+
+.card {
+    background: #ffffff;
+
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+
+    padding: 24px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+            0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   File Input
+   ========================= */
+
+.file-input {
+    display: block;
+
+    border: 2px dashed #cbd5e1;
+    border-radius: 10px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: border-color 0.2s ease;
+}
+
+.file-input:hover {
+    border-color: #667085;
+}
+
+.file-input span {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.file-input input {
+    width: 100%;
+}
+
+
+/* =========================
+   File Information
+   ========================= */
+
+.file-info {
+    margin-top: 20px;
+}
+
+.file-info-label {
+    display: block;
+
+    font-size: 13px;
+    color: #667085;
+
+    margin-bottom: 5px;
+}
+
+#fileName {
+    font-weight: 500;
+    word-break: break-word;
+}
+
+
+/* =========================
+   Form
+   ========================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.form-group select {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   Button
+   ========================= */
+
+button {
+    width: 100%;
+
+    padding: 12px 16px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #1f2937;
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+            opacity 0.2s ease,
+            transform 0.1s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   Progress
+   ========================= */
+
+.progress-container {
+    width: 100%;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+}
+
+#progressText {
+    font-weight: 600;
+}
+
+progress {
+    width: 100%;
+    height: 18px;
+}
+
+
+/* =========================
+   Result
+   ========================= */
+
+#statusText {
+    color: #667085;
+    margin-bottom: 15px;
+}
+
+.download-link {
+    display: inline-block;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    background: #1f2937;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.download-link:hover {
+    opacity: 0.9;
+}
+
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 15px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+}

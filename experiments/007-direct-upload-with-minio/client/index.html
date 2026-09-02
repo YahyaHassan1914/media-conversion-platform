@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Direct Upload to MinIO</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="container">
+
+    <h1>Direct File Upload</h1>
+
+    <p class="description">
+        Upload a file directly from your browser to MinIO.
+    </p>
+
+    <section class="upload-card">
+
+        <label for="fileInput" class="file-label">
+            Select File
+        </label>
+
+        <input
+                type="file"
+                id="fileInput"
+        >
+
+        <div id="fileInfo" class="file-info hidden">
+            <p>
+                <strong>File:</strong>
+                <span id="fileName"></span>
+            </p>
+
+            <p>
+                <strong>Size:</strong>
+                <span id="fileSize"></span>
+            </p>
+
+            <p>
+                <strong>Type:</strong>
+                <span id="fileType"></span>
+            </p>
+        </div>
+
+        <button
+                id="uploadButton"
+                disabled
+        >
+            Upload
+        </button>
+
+        <div id="progressContainer" class="progress-container hidden">
+
+            <div class="progress-header">
+                <span>Uploading</span>
+                <span id="progressPercentage">0%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div
+                        id="progressBar"
+                        class="progress"
+                ></div>
+            </div>
+
+            <p id="progressDetails">
+                Waiting...
+            </p>
+
+        </div>
+
+        <div id="status" class="status"></div>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

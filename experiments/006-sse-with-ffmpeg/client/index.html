@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Audio Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<main class="container">
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Audio Converter</h1>
+        <p>Convert your audio files to another format.</p>
+    </header>
+
+
+    <!-- File Selection -->
+    <section class="card">
+        <h2>1. Select Audio File</h2>
+
+        <label class="file-input">
+            <span>Choose an audio file</span>
+
+            <input
+                    type="file"
+                    id="audioFile"
+                    accept="audio/*"
+            >
+        </label>
+
+        <div class="file-info">
+            <span class="file-info-label">Selected file</span>
+            <p id="fileName">No file selected</p>
+        </div>
+    </section>
+
+
+    <!-- Output Settings -->
+    <section class="card">
+        <h2>2. Choose Output Format</h2>
+
+        <div class="form-group">
+            <label for="outputFormat">
+                Output format
+            </label>
+
+            <select id="outputFormat">
+                <option value="mp3">MP3</option>
+                <option value="wav">WAV</option>
+                <option value="aac">AAC</option>
+                <option value="ogg">OGG</option>
+            </select>
+        </div>
+
+        <button
+                id="convertButton"
+                type="button"
+        >
+            Convert Audio
+        </button>
+    </section>
+
+
+    <!-- Progress -->
+    <section class="card">
+        <h2>3. Conversion Progress</h2>
+
+        <div class="progress-container">
+            <div class="progress-header">
+                <span>Status</span>
+                <span id="progressText">0%</span>
+            </div>
+
+            <progress
+                    id="progressBar"
+                    value="0"
+                    max="100">
+            </progress>
+        </div>
+    </section>
+
+
+    <!-- Result -->
+    <section class="card" id="result">
+        <h2>4. Result</h2>
+
+        <p id="statusText">No conversion yet.</p>
+
+        <a
+                id="downloadLink"
+                class="download-link"
+                href="#"
+                hidden
+        >
+            Download Converted File
+        </a>
+    </section>
+
+</main>
+
+</body>
+</html>
