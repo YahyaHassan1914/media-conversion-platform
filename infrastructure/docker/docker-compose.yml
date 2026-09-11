@@ -1,0 +1,17 @@
+name: media-platform
+
+include:
+  - ./compose/postgres.yml
+  - ./compose/redis.yml
+  - ./compose/minio.yml
+
+networks:
+  platform:
+    name: media-platform
+
+volumes:
+  postgres_data:
+    name: media-platform-postgres-data
+
+  minio_data:
+    name: media-platform-minio-data
